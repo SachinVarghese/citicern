@@ -18,8 +18,8 @@ function App() {
   };
 
   const login = () => {
-    navigate(basepath);
     setLogin(true);
+    navigate(basepath);
   };
 
   return (
@@ -29,7 +29,7 @@ function App() {
           <div className={styles["AppContent"]}>
             <Header />
             <Router className={styles["AppContent"]} basepath={basepath}>
-              <ChallengeList path="/" />
+              <ChallengeList path="" />
               <Tasks path="tasks" />
               <Profile path="profile" logout={logout} />
             </Router>

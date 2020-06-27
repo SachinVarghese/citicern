@@ -27,7 +27,7 @@ function App() {
         <React.Fragment>
           <div className={styles["AppContent"]}>
             <Header />
-            <Router className={styles["AppContent"]}>
+            <Router className={styles["AppContent"]} basepath="/citicern">
               <ChallengeList path="/" />
               <Tasks path="tasks" />
               <Profile path="profile" logout={logout} />

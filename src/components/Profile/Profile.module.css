@@ -3,9 +3,26 @@
   flex: 1;
   flex-direction: column;
   align-items: center;
-  justify-content: space-evenly;
+  justify-content: center;
 }
 
 .user-icon {
   height: 200px;
+}
+
+.points-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 20px;
+  height: 80px;
+  justify-content: space-between;
+}
+
+.user-content {
+  margin: 20px;
+}
+
+.buttons {
+  margin: 20px !important;
 }

@@ -5,7 +5,8 @@ import styles from "./Challenge.module.css";
 import Scrollbars from "react-custom-scrollbars";
 import Button from "@material-ui/core/Button";
 import AddIcon from "@material-ui/icons/Add";
-import challenges from "../ChallengeData/challenges";
+import FIlterIcon from "@material-ui/icons/Tune";
+import challenges from "../data/challenges";
 
 export default function (props) {
   return (
@@ -20,15 +21,24 @@ export default function (props) {
           alignItems: "center",
         }}
       >
-        <Typography variant="h6">Challenges</Typography>
-        <Button
-          variant="outlined"
-          color="primary"
-          size="small"
-          startIcon={<AddIcon />}
+        <Typography variant="h6">All Challenges</Typography>
+        <div
+          style={{
+            display: "flex",
+            justifyContent: "space-between",
+            alignItems: "center",
+          }}
         >
-          Create
-        </Button>
+          <FIlterIcon color="primary" style={{ marginRight: 10 }} />
+          <Button
+            variant="outlined"
+            color="secondary"
+            size="small"
+            startIcon={<AddIcon />}
+          >
+            Create
+          </Button>
+        </div>
       </div>
       <Scrollbars>
         {challenges.map((c, k) => (

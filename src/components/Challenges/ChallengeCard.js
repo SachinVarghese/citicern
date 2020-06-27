@@ -44,7 +44,7 @@ export default function ChallengeCard(props) {
         title={c.title}
         subheader={c.creationDate}
       />
-      <CardMedia className={classes.media} image={c.img} title="Paella dish" />
+      <CardMedia className={classes.media} image={c.img} title={c.title} />
       <CardContent>
         <Typography variant="body2" color="textSecondary" component="p">
           {c.description}
@@ -58,7 +58,7 @@ export default function ChallengeCard(props) {
           <ShareIcon />
         </IconButton>
         <Typography style={{ marginLeft: "auto" }}>
-          Rewards : 7.5
+          Points : 7.5
           <span role="img" aria-label="star">
             &#11088;
           </span>

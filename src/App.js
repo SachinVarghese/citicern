@@ -6,9 +6,10 @@ import Profile from "./components/Profile/Profile";
 import Header from "./components/Header";
 import Login from "./components/Login";
 import ChallengeList from "./components/Challenges/ChallengeList";
+import TaskList from "./components/Tasks/TaskList";
+import useMediaQuery from "@material-ui/core/useMediaQuery";
 
 const basepath = "/citicern";
-let Tasks = () => <div>Tasks</div>;
 
 function App() {
   const [isLoggedIn, setLogin] = React.useState(false);
@@ -21,24 +22,34 @@ function App() {
     setLogin(true);
     navigate(basepath);
   };
+  const mobileSize = useMediaQuery("(max-width:600px)");
 
   return (
-    <div className={styles["App"]}>
-      {isLoggedIn && (
-        <React.Fragment>
-          <div className={styles["AppContent"]}>
-            <Header />
-            <Router className={styles["AppContent"]} basepath={basepath}>
-              <ChallengeList path="" />
-              <Tasks path="tasks" />
-              <Profile path="profile" logout={logout} />
-            </Router>
-          </div>
-          <BottomNav basepath={basepath} />
-        </React.Fragment>
+    <React.Fragment>
+      {mobileSize && (
+        <div className={styles["App"]}>
+          {isLoggedIn && (
+            <React.Fragment>
+              <div className={styles["AppContent"]}>
+                <Header />
+                <Router className={styles["AppContent"]} basepath={basepath}>
+                  <ChallengeList path="" default />
+                  <TaskList path="tasks" />
+                  <Profile path="profile" logout={logout} />
+                </Router>
+              </div>
+              <BottomNav basepath={basepath} />
+            </React.Fragment>
+          )}
+          {!isLoggedIn && <Login login={login}></Login>}
+        </div>
       )}
-      {!isLoggedIn && <Login login={login}></Login>}
-    </div>
+      {!mobileSize && (
+        <h6 style={{ margin: "auto", width: "fit-content" }}>
+          Device Resoulution unsupported. Please switch to mobile
+        </h6>
+      )}
+    </React.Fragment>
   );
 }
 

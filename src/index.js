@@ -4,12 +4,15 @@ import "./index.css";
 import App from "./App";
 import * as serviceWorker from "./serviceWorker";
 import { ThemeProvider, createMuiTheme } from "@material-ui/core";
-import { deepPurple } from "@material-ui/core/colors";
+import { deepPurple, teal } from "@material-ui/core/colors";
 
 const theme = createMuiTheme({
   palette: {
     primary: {
       main: deepPurple[900],
+    },
+    secondary: {
+      main: teal["800"],
     },
   },
 });

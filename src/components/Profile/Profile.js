@@ -3,17 +3,29 @@ import Button from "@material-ui/core/Button";
 import styles from "./Profile.module.css";
 import userImg from "./user.png";
 import { Typography } from "@material-ui/core";
+import ChevronRightIcon from "@material-ui/icons/ChevronRight";
 
 export default function (props) {
   return (
     <div className={styles["main"]}>
-      <Typography variant="h6" align="right">
-        Total Rewards : 65
-        <span role="img" aria-label="star">
-          &#11088;
-        </span>
-      </Typography>
-      <div>
+      <div className={styles["points-content"]}>
+        <Typography variant="h6" align="right">
+          Total Points : 65
+          <span role="img" aria-label="star">
+            &#11088;
+          </span>
+        </Typography>
+        <Button
+          variant="outlined"
+          color="primary"
+          size="small"
+          endIcon={<ChevronRightIcon />}
+        >
+          Exchange for Rewards
+        </Button>
+      </div>
+
+      <div className={styles["user-content"]}>
         <img
           className={styles["user-icon"]}
           src={userImg}
@@ -26,7 +38,15 @@ export default function (props) {
           Phd Student at CERN
         </Typography>
       </div>
-      <Button variant="contained" color="primary" onClick={props.logout}>
+      <Button variant="text" className={styles["buttons"]}>
+        View Challenge History
+      </Button>
+      <Button
+        variant="outlined"
+        color="secondary"
+        className={styles["buttons"]}
+        onClick={props.logout}
+      >
         Logout
       </Button>
     </div>

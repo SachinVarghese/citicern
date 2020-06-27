@@ -1,27 +1,31 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "60c572c5a024512ccb5a5c4f118ebf04",
+    "revision": "85dec247f4874949cd19565c9307f23f",
     "url": "/citicern/index.html"
   },
   {
-    "revision": "a6b4e46334a5ca6b33da",
-    "url": "/citicern/static/css/main.6c70d2ae.chunk.css"
+    "revision": "6339632e932706b61793",
+    "url": "/citicern/static/css/main.4817058f.chunk.css"
   },
   {
-    "revision": "a62520c64c2b20dd5f46",
-    "url": "/citicern/static/js/2.8a183db2.chunk.js"
+    "revision": "b342db853658f51fc9dd",
+    "url": "/citicern/static/js/2.6c9de14b.chunk.js"
   },
   {
     "revision": "0749163b59fbee32225059cb60c18af6",
-    "url": "/citicern/static/js/2.8a183db2.chunk.js.LICENSE.txt"
+    "url": "/citicern/static/js/2.6c9de14b.chunk.js.LICENSE.txt"
   },
   {
-    "revision": "a6b4e46334a5ca6b33da",
-    "url": "/citicern/static/js/main.c1b4b1ff.chunk.js"
+    "revision": "6339632e932706b61793",
+    "url": "/citicern/static/js/main.d3c89064.chunk.js"
   },
   {
     "revision": "032b75f5f4a87cd9d03b",
     "url": "/citicern/static/js/runtime-main.828595fa.js"
+  },
+  {
+    "revision": "2e52be4a5217835687e4d7893d0d7308",
+    "url": "/citicern/static/media/citicern.2e52be4a.png"
   },
   {
     "revision": "c3e7fea834548c6b7d7bf4ae3d371f72",

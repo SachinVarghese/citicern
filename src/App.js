@@ -45,9 +45,9 @@ function App() {
         </div>
       )}
       {!mobileSize && (
-        <h6 style={{ margin: "auto", width: "fit-content" }}>
-          Device Resoulution unsupported. Please switch to mobile
-        </h6>
+        <h2 style={{ margin: "auto", width: "fit-content" }}>
+          Resoulution unsupported. Please switch to a mobile device.
+        </h2>
       )}
     </React.Fragment>
   );

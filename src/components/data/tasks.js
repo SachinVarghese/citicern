@@ -16,7 +16,7 @@ export default [
     progress: 100,
   },
   {
-    id: "transport_data",
+    id: "traffic_data",
     color: "#607d8b",
     title: "Traffic data collection",
     startDate: "June 27, 2020",

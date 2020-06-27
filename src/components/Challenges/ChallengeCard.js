@@ -58,7 +58,7 @@ export default function ChallengeCard(props) {
           <ShareIcon />
         </IconButton>
         <Typography style={{ marginLeft: "auto" }}>
-          Points : 7.5
+          {`Points : ${c.points}`}
           <span role="img" aria-label="star">
             &#11088;
           </span>

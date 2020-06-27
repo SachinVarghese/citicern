@@ -50,6 +50,7 @@ export default function (props) {
           key={opt.label}
           label={opt.label}
           icon={opt.icon}
+          color="secondary"
         />
       ))}
     </BottomNavigation>

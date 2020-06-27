@@ -2,9 +2,9 @@ import React from "react";
 import { makeStyles } from "@material-ui/core/styles";
 import BottomNavigation from "@material-ui/core/BottomNavigation";
 import BottomNavigationAction from "@material-ui/core/BottomNavigationAction";
-import RestoreIcon from "@material-ui/icons/Restore";
-import FavoriteIcon from "@material-ui/icons/Favorite";
-import UserIcon from "@material-ui/icons/SupervisedUserCircle";
+import ListIcon from "@material-ui/icons/List";
+import FavoriteIcon from "@material-ui/icons/Star";
+import UserIcon from "@material-ui/icons/AccountCircle";
 import { navigate } from "@reach/router";
 
 const useStyles = makeStyles({
@@ -15,14 +15,14 @@ const useStyles = makeStyles({
 
 const OptionsList = [
   {
-    label: "Recents",
-    icon: <RestoreIcon />,
+    label: "Challenges",
+    icon: <ListIcon />,
     link: "",
   },
   {
-    label: "Challenges",
+    label: "My Tasks",
     icon: <FavoriteIcon />,
-    link: "dashboard",
+    link: "tasks",
   },
   {
     label: "Profile",

@@ -1,29 +1,42 @@
 import React from "react";
-import Button from "@material-ui/core/Button";
-import { Router } from "@reach/router";
-import BottomVav from "./components/BottomVav";
+import { Router, navigate } from "@reach/router";
+import BottomNav from "./components/BottomNav";
 import styles from "./App.module.css";
+import Profile from "./components/Profile/Profile";
+import Header from "./components/Header";
+import Login from "./components/Login";
+import ChallengeList from "./components/Challenges/ChallengeList";
 
-let Home = () => <div>Home</div>;
-let Dash = () => (
-  <div>
-    <Button variant="contained" color="primary">
-      Hello World
-    </Button>
-  </div>
-);
+let Tasks = () => <div>Tasks</div>;
 
 function App() {
+  const [isLoggedIn, setLogin] = React.useState(false);
+
+  const logout = () => {
+    setLogin(false);
+  };
+
+  const login = () => {
+    navigate("/");
+    setLogin(true);
+  };
+
   return (
     <div className={styles["App"]}>
-      <div className={styles["AppContent"]}>
-        <Router>
-          <Home path="/" />
-          <Dash path="dashboard" />
-          <Dash path="profile" />
-        </Router>
-      </div>
-      <BottomVav></BottomVav>
+      {isLoggedIn && (
+        <React.Fragment>
+          <div className={styles["AppContent"]}>
+            <Header />
+            <Router className={styles["AppContent"]}>
+              <ChallengeList path="/" />
+              <Tasks path="tasks" />
+              <Profile path="profile" logout={logout} />
+            </Router>
+          </div>
+          <BottomNav />
+        </React.Fragment>
+      )}
+      {!isLoggedIn && <Login login={login}></Login>}
     </div>
   );
 }

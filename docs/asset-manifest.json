@@ -1,14 +1,14 @@
 {
   "files": {
     "main.css": "/citicern/static/css/main.6c70d2ae.chunk.css",
-    "main.js": "/citicern/static/js/main.f92c0485.chunk.js",
-    "main.js.map": "/citicern/static/js/main.f92c0485.chunk.js.map",
+    "main.js": "/citicern/static/js/main.c1b4b1ff.chunk.js",
+    "main.js.map": "/citicern/static/js/main.c1b4b1ff.chunk.js.map",
     "runtime-main.js": "/citicern/static/js/runtime-main.828595fa.js",
     "runtime-main.js.map": "/citicern/static/js/runtime-main.828595fa.js.map",
     "static/js/2.8a183db2.chunk.js": "/citicern/static/js/2.8a183db2.chunk.js",
     "static/js/2.8a183db2.chunk.js.map": "/citicern/static/js/2.8a183db2.chunk.js.map",
     "index.html": "/citicern/index.html",
-    "precache-manifest.614bad1f99adac95428989cee2de7eeb.js": "/citicern/precache-manifest.614bad1f99adac95428989cee2de7eeb.js",
+    "precache-manifest.def90718179f5cce73a6507a87e72fa2.js": "/citicern/precache-manifest.def90718179f5cce73a6507a87e72fa2.js",
     "service-worker.js": "/citicern/service-worker.js",
     "static/css/main.6c70d2ae.chunk.css.map": "/citicern/static/css/main.6c70d2ae.chunk.css.map",
     "static/js/2.8a183db2.chunk.js.LICENSE.txt": "/citicern/static/js/2.8a183db2.chunk.js.LICENSE.txt",
@@ -19,6 +19,6 @@
     "static/js/runtime-main.828595fa.js",
     "static/js/2.8a183db2.chunk.js",
     "static/css/main.6c70d2ae.chunk.css",
-    "static/js/main.f92c0485.chunk.js"
+    "static/js/main.c1b4b1ff.chunk.js"
   ]
 }

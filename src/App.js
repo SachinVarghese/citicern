@@ -7,6 +7,7 @@ import Header from "./components/Header";
 import Login from "./components/Login";
 import ChallengeList from "./components/Challenges/ChallengeList";
 
+const basepath = "/citicern";
 let Tasks = () => <div>Tasks</div>;
 
 function App() {
@@ -17,7 +18,7 @@ function App() {
   };
 
   const login = () => {
-    navigate("/");
+    navigate(basepath);
     setLogin(true);
   };
 
@@ -27,13 +28,13 @@ function App() {
         <React.Fragment>
           <div className={styles["AppContent"]}>
             <Header />
-            <Router className={styles["AppContent"]} basepath="/citicern">
+            <Router className={styles["AppContent"]} basepath={basepath}>
               <ChallengeList path="/" />
               <Tasks path="tasks" />
               <Profile path="profile" logout={logout} />
             </Router>
           </div>
-          <BottomNav />
+          <BottomNav basepath={basepath} />
         </React.Fragment>
       )}
       {!isLoggedIn && <Login login={login}></Login>}

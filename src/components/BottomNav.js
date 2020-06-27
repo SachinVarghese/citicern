@@ -31,7 +31,7 @@ const OptionsList = [
   },
 ];
 
-export default function () {
+export default function (props) {
   const classes = useStyles();
   const [value, setValue] = React.useState(0);
 
@@ -39,7 +39,7 @@ export default function () {
     <BottomNavigation
       value={value}
       onChange={(_, newValue) => {
-        navigate("/" + OptionsList[newValue].link);
+        navigate(props.basepath + "/" + OptionsList[newValue].link);
         setValue(newValue);
       }}
       showLabels

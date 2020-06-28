@@ -1,6 +1,7 @@
-CitiCERN
+# CitiCERN
 
 A platform for crowd-sourcing data for scientific research.
+https://www.youtube.com/watch?v=-AeN6uW3IaE
 
 ![citicern](./assets/citicern.gif)
 

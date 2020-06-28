@@ -1,10 +1,10 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "7abbb58dfe21e2d87df8d8bb08bf85ec",
+    "revision": "e60f41311897d4b1b6b17e6f168ca5cf",
     "url": "/citicern/index.html"
   },
   {
-    "revision": "00e615484893aaac99bc",
+    "revision": "65a2b936f88e0d09d85c",
     "url": "/citicern/static/css/main.4817058f.chunk.css"
   },
   {
@@ -16,8 +16,8 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/citicern/static/js/2.d4a65e05.chunk.js.LICENSE.txt"
   },
   {
-    "revision": "00e615484893aaac99bc",
-    "url": "/citicern/static/js/main.f91c4bfd.chunk.js"
+    "revision": "65a2b936f88e0d09d85c",
+    "url": "/citicern/static/js/main.93166857.chunk.js"
   },
   {
     "revision": "032b75f5f4a87cd9d03b",

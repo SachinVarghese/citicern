@@ -105,8 +105,14 @@ function App() {
         </div>
       )}
       {!mobileSize && (
-        <h2 style={{ margin: "auto", width: "fit-content" }}>
+        <h2
+          style={{ margin: "auto", width: "fit-content", textAlign: "center" }}
+        >
           Resoulution unsupported. Please switch to a mobile device.
+          <br />
+          <span style={{ fontSize: 14 }}>
+            ( Or resize your browser window for below 600 pixels in width)
+          </span>
         </h2>
       )}
     </React.Fragment>

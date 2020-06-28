@@ -42,7 +42,13 @@ export default function (props) {
       </div>
       <Scrollbars>
         {challenges.map((c, k) => (
-          <ChallengeCard key={k} challenge={c} />
+          <ChallengeCard
+            key={k}
+            challenge={c}
+            onClick={() => {
+              props.gotoChallngePage(c.id);
+            }}
+          />
         ))}
       </Scrollbars>
     </div>

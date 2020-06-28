@@ -39,8 +39,8 @@ export default function (props) {
     <BottomNavigation
       value={value}
       onChange={(_, newValue) => {
-        navigate(props.basepath + "/" + OptionsList[newValue].link);
         setValue(newValue);
+        navigate(props.basepath + "/" + OptionsList[newValue].link);
       }}
       showLabels
       className={classes.root}

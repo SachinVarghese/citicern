@@ -6,6 +6,7 @@ import CardMedia from "@material-ui/core/CardMedia";
 import CardContent from "@material-ui/core/CardContent";
 import CardActions from "@material-ui/core/CardActions";
 import Avatar from "@material-ui/core/Avatar";
+import Chip from "@material-ui/core/Chip";
 import IconButton from "@material-ui/core/IconButton";
 import Typography from "@material-ui/core/Typography";
 import FavoriteIcon from "@material-ui/icons/Favorite";
@@ -29,7 +30,7 @@ export default function ChallengeCard(props) {
   const c = props.challenge;
 
   return (
-    <Card className={classes.root}>
+    <Card className={classes.root} onClick={props.onClick}>
       <CardHeader
         avatar={
           <Avatar aria-label="recipe" style={{ backgroundColor: c.color }}>
@@ -57,12 +58,20 @@ export default function ChallengeCard(props) {
         <IconButton aria-label="share">
           <ShareIcon />
         </IconButton>
-        <Typography style={{ marginLeft: "auto" }}>
-          {`Points : ${c.points}`}
-          <span role="img" aria-label="star">
-            &#11088;
-          </span>
-        </Typography>
+        <IconButton aria-label="points">
+          <Typography>
+            {`${c.points}`}
+            <span role="img" aria-label="star">
+              &#11088;
+            </span>
+          </Typography>
+        </IconButton>
+        <Chip
+          label={c.difficulty}
+          variant="outlined"
+          color="secondary"
+          style={{ margin: 2, marginLeft: "auto" }}
+        />
       </CardActions>
     </Card>
   );

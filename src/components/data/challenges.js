@@ -10,6 +10,7 @@ export default [
     description:
       "This challenge involves collection of water samples from the Thames river at certain marked locations. The water samples should be collected at every morning for a stipulated time frame. this data can be utilized for measuring water quality by pH measurements.",
     points: "7.5",
+    difficulty: "Beginner",
   },
   {
     id: "traffic_data",
@@ -20,5 +21,6 @@ export default [
     description:
       "This challenge involves collection of traffic data. Understand the network surrounding IoT data to map the digital infrastructure of a space. Understand how populations flow in major urban centers to create mobility solutions. Telematic Fields. Quality Data. Transparency. Features: Telematic Fields, Quality Data.",
     points: "6.0",
+    difficulty: "Expert",
   },
 ];

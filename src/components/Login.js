@@ -38,14 +38,14 @@ export default (props) => {
       <Header />
       <div className={classes.root}>
         <Typography variant="h6" color="primary" style={{ marginBottom: 30 }}>
-          Welocme to CitiCERN App
+          Welcome to CitiCERN App
         </Typography>
         <FormControl className={classes.margin}>
           <InputLabel htmlFor="input-with-icon-adornment">
             Enter Username
           </InputLabel>
           <Input
-            id="username"
+            id="citinames"
             startAdornment={
               <InputAdornment position="start">
                 <AccountCircle />

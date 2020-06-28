@@ -25,7 +25,13 @@ export default function (props) {
       </div>
       <Scrollbars>
         {tasks.map((c, k) => (
-          <Task key={k} task={c} />
+          <Task
+            key={k}
+            task={c}
+            onClick={() => {
+              props.gotoChallngePage(c.id, { accepted: true });
+            }}
+          />
         ))}
       </Scrollbars>
     </div>

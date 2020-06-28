@@ -27,7 +27,7 @@ export default function Task(props) {
   const { task } = props;
 
   return (
-    <Card className={classes.root}>
+    <Card className={classes.root} onClick={props.onClick}>
       <CardActionArea>
         <CardContent className={classes.content}>
           <Typography gutterBottom variant="body1">
@@ -37,7 +37,7 @@ export default function Task(props) {
           </Typography>
           <CircularProgressWithLabel
             value={task.progress}
-            done={task.approved}
+            completed={task.approved}
           />
         </CardContent>
       </CardActionArea>
@@ -77,14 +77,14 @@ function CircularProgressWithLabel(props) {
         alignItems="center"
         justifyContent="center"
       >
-        {!props.done && (
+        {!props.completed && (
           <Typography
             variant="caption"
             component="div"
             color="textSecondary"
           >{`${Math.round(props.value)}%`}</Typography>
         )}
-        {props.done && <DoneIcon color="secondary" />}
+        {props.completed && <DoneIcon color="secondary" />}
       </Box>
     </Box>
   );

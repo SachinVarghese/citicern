@@ -10,7 +10,7 @@ export default function (props) {
     <div className={styles["main"]}>
       <div className={styles["points-content"]}>
         <Typography variant="h6" align="right">
-          Total Points : 65
+          Total CitiCoins : 65
           <span role="img" aria-label="star">
             &#11088;
           </span>

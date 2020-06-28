@@ -1,5 +1,9 @@
 CitiCERN
 
+A platform for crowd-sourcing data for scientific research.
+
+![citicern](./assets/citicern.gif)
+
 ## Available Scripts
 
 In the project directory, you can run:

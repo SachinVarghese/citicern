@@ -1,23 +1,23 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "56872c9ec5ea2bcb17361ed1cbd879a1",
+    "revision": "2bdef6e37318055b7c5af4a49c41ff34",
     "url": "/citicern/index.html"
   },
   {
-    "revision": "bd60a1e55dc2f76a595d",
+    "revision": "c5fb0e5c803f6a8e57bd",
     "url": "/citicern/static/css/main.4817058f.chunk.css"
   },
   {
-    "revision": "ffbaee8d564541c614f5",
-    "url": "/citicern/static/js/2.d4618b59.chunk.js"
+    "revision": "68cbcf75c8519a327bc0",
+    "url": "/citicern/static/js/2.e3b383cb.chunk.js"
   },
   {
     "revision": "0749163b59fbee32225059cb60c18af6",
-    "url": "/citicern/static/js/2.d4618b59.chunk.js.LICENSE.txt"
+    "url": "/citicern/static/js/2.e3b383cb.chunk.js.LICENSE.txt"
   },
   {
-    "revision": "bd60a1e55dc2f76a595d",
-    "url": "/citicern/static/js/main.2573a325.chunk.js"
+    "revision": "c5fb0e5c803f6a8e57bd",
+    "url": "/citicern/static/js/main.61d0b3ea.chunk.js"
   },
   {
     "revision": "032b75f5f4a87cd9d03b",

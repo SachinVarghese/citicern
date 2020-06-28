@@ -10,6 +10,7 @@ import ChallengePage from "./components/Challenges/ChallengePage";
 import TaskList from "./components/Tasks/TaskList";
 import useMediaQuery from "@material-ui/core/useMediaQuery";
 import Category from "./components/Category";
+import Snackbar from "@material-ui/core/Snackbar";
 
 const basepath = "/citicern";
 
@@ -43,6 +44,23 @@ function App() {
 
   const mobileSize = useMediaQuery("(max-width:600px)");
 
+  const [state, setState] = React.useState({
+    open: true,
+    vertical: "bottom",
+    horizontal: "center",
+    message: "Welcome",
+  });
+
+  const { vertical, horizontal, open, message } = state;
+
+  const handleOpenNotification = (newState) => () => {
+    setState({ ...state, ...newState, open: true });
+  };
+
+  const handleCloseNotification = () => {
+    setState({ ...state, open: false });
+  };
+
   return (
     <React.Fragment>
       {mobileSize && (
@@ -65,12 +83,22 @@ function App() {
                     path="challenges/:cid"
                     gotoTasksScreen={gotoTasksScreen}
                     gotoProfileScreen={gotoProfileScreen}
+                    handleOpenNotification={handleOpenNotification}
                   />
                   <TaskList path="tasks" gotoChallngePage={gotoChallngePage} />
                   <Profile path="profile" logout={logout} />
                 </Router>
               </div>
               <BottomNav basepath={basepath} />
+              <Snackbar
+                anchorOrigin={{ vertical, horizontal }}
+                open={open}
+                autoHideDuration={2000}
+                onClose={handleCloseNotification}
+                message={message}
+                key={vertical + horizontal}
+                style={{ marginBottom: 70 }}
+              />
             </React.Fragment>
           )}
           {!isLoggedIn && <Login login={login}></Login>}

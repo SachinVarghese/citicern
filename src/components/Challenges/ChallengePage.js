@@ -14,6 +14,7 @@ import Typography from "@material-ui/core/Typography";
 import FavoriteIcon from "@material-ui/icons/Favorite";
 import ShareIcon from "@material-ui/icons/Share";
 import MoreVertIcon from "@material-ui/icons/MoreVert";
+import CloudUploadIcon from "@material-ui/icons/CloudUpload";
 import challenges from "../data/challenges";
 
 const useStyles = makeStyles((theme) => ({
@@ -90,7 +91,12 @@ export default function ChallengePage(props) {
           <Typography paragraph variant="overline">
             Note:
           </Typography>
-          <Typography paragraph variant="body2" color="textSecondary">
+          <Typography
+            paragraph
+            variant="body2"
+            color="textSecondary"
+            component="p"
+          >
             Heat oil in a (14- to 16-inch) paella pan or a large, deep skillet
             over medium-high heat. Add chicken, shrimp and chorizo, and cook,
             stirring occasionally until lightly browned, 6 to 8 minutes.
@@ -100,16 +106,36 @@ export default function ChallengePage(props) {
             fragrant, about 10 minutes. Add saffron broth and remaining 4 1/2
             cups chicken broth; bring to a boil.
           </Typography>
-          <Typography paragraph variant="body2" color="textSecondary">
+          <Typography
+            paragraph
+            variant="body2"
+            color="textSecondary"
+            component="p"
+          >
             Submit pictures and data samples for approval.
           </Typography>
         </CardContent>
       </Collapse>
+      {accepted && (
+        <Button
+          variant="contained"
+          color="default"
+          className={classes.buttons}
+          startIcon={<CloudUploadIcon />}
+        >
+          Upload Files
+        </Button>
+      )}
       <Button
         variant="contained"
         color="secondary"
         className={classes["buttons"]}
-        onClick={!accepted ? props.gotoTasksScreen : props.gotoProfileScreen}
+        onClick={() => {
+          props.gotoTasksScreen();
+          props.handleOpenNotification({
+            message: !accepted ? "Challenge Accepted!" : "Challenge submitted!",
+          })();
+        }}
       >
         {!accepted ? "Accept Challenge" : "Submit for approval"}
       </Button>

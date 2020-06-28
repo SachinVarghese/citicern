@@ -45,7 +45,7 @@ export default (props) => {
             Enter Username
           </InputLabel>
           <Input
-            id="citinames"
+            id="citicern-username"
             startAdornment={
               <InputAdornment position="start">
                 <AccountCircle />
